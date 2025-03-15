@@ -1,39 +1,13 @@
 ---
-import { localizePath } from "astro-i18next";
-import { t } from "i18next";
-import { LanguageSelector } from "astro-i18next/components";
-
-const nav = [
-  {
-    name: t('common:nav.home'),
-    href: '/'
-  },
-  {
-    name: t('common:nav.blog'),
-    href: '/blog'
-  },
-  {
-    name: t('common:nav.about'),
-    href: '/about'
-  }
-]
+import LanguagePicker from './LanguagePicker.astro';
+import Navbar from './Navbar.astro';
 ---
 
 <header class="bg-white shadow-md p-4">
   <div class="container mx-auto flex justify-between items-center">
     <h1 class="text-xl font-bold">My Website</h1>
-    <nav>
-      <ul class="flex space-x-4">
-        {nav.map((item) => (
-          <li>
-            <a href={localizePath(item.href)} class="text-gray-700 hover:text-blue-500">
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
 
-    <LanguageSelector />
+    <Navbar />
+    <LanguagePicker />
   </div>
 </header>

@@ -1,0 +1,36 @@
+---
+import { localizePath } from 'astro-i18next';
+import { t } from 'i18next';
+
+const nav = [
+  {
+    name: t('common:nav.home'),
+    href: '/',
+  },
+  {
+    name: t('common:nav.blog'),
+    href: '/blog',
+  },
+  {
+    name: t('common:nav.about'),
+    href: '/about',
+  },
+];
+---
+
+<nav>
+  <ul class="flex space-x-4">
+    {
+      nav.map((item) => (
+        <li>
+          <a
+            href={localizePath(item.href)}
+            class="text-gray-700 hover:text-blue-500"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
