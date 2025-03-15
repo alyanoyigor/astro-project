@@ -1,0 +1,21 @@
+---
+const currentPath = Astro.url.pathname;
+console.log(currentPath);
+---
+
+<ul class="flex space-x-4 p-2 bg-gray-100 rounded-lg">
+  {
+    Object.entries({ en: 'English', fr: 'Français', uk: 'Українська' }).map(
+      ([lang, label]) => (
+        <li>
+          <a
+            href={lang === 'en' ? '/' : `/${lang}/`}
+            class="text-blue-600 hover:text-blue-800 font-medium"
+          >
+            {label}
+          </a>
+        </li>
+      )
+    )
+  }
+</ul>
