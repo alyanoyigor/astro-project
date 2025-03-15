@@ -13,5 +13,5 @@ export default defineConfig({
   },
 
   site: 'https://alyanoyigor.github.io',
-  base: import.meta.env.DEV ? '/' : 'astro-project',
+  base: 'astro-project',
 });
