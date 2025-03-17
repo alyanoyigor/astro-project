@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "Favorite Articles",
+    "description": "Your favorite articles."
+  },
+  "title": "Favorite Articles",
+  "subtitle": "Your favorite articles.",
+  "post1": {
+    "title": "The Future of Web Development",
+    "description": "Discover the latest trends and technologies shaping the web."
+  },
+  "post2": {
+    "title": "Why Performance Matters",
+    "description": "Learn how website speed impacts user experience and SEO."
+  },
+  "post3": {
+    "title": "Building Scalable Applications",
+    "description": "Explore strategies for creating high-performance web applications."
+  }
+}
